@@ -3,8 +3,8 @@
 A ReactJS "Notes App" interface.
 
 ## Tech Stack Dependencies
-
-**Server:** Node.js, Express.js, Bcrypt.js, Knex.js, Nodemon. at: https://github.com/dougdbp/rocketnotes-server
+**Interface:** ViteJS, ReactJS, ReactDOM, Styled-components
+**Server at:** https://github.com/dougdbp/rocketnotes-server
 ## Installation (Test only)
 
 To install the dependencies with NPM:

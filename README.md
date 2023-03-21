@@ -3,7 +3,7 @@
 A ReactJS "Notes App" interface.
 
 ## Tech Stack Dependencies
-**Interface:** ViteJS, ReactJS, ReactDOM, Styled-components, React Icons, React Router;
+**Interface:** ViteJS, ReactJS, ReactDOM, Styled-components, React Icons, React Router, AxiosJS;
 
 **Server at:** https://github.com/dougdbp/rocketnotes-server
 ## Installation (Test only)

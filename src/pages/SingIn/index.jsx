@@ -1,11 +1,20 @@
+import { useContext } from 'react';
+
+import { MyContext } from '../../myContext';
+
 import { Container, Form, Backgroud } from "./styles";
 import { FiMail, FiLock } from 'react-icons/fi';
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
 
 import { Link } from "react-router-dom";
+import React, { useContext } from "react";
 
 export function SingIn() {
+
+    const data = useContext(MyContext);
+    
+
     return (
         <Container>
             <Form>

@@ -1,10 +1,14 @@
 import styled from "styled-components";
 
 export const Container = styled.span`
-    font-size: 12px;
-    padding: 5px 14px;
-    border-radius: 5px;
+    padding: 5px 12px;
+    width: fit-content;
     margin-right: 6px;
-    color: ${({ theme }) => theme.COLORS.BACKGROUND_900 };
-    background-color: ${({ theme }) => theme.COLORS.ORANGE };;
+
+    background: ${({ theme }) => theme.COLORS.HIGHLIGHT_COLOR};
+    border-radius: 5px;
+
+    color: ${({ theme }) => theme.COLORS.GRAY_900};
+    font-size: ${({ theme }) => theme.FONT_SIZE.XS};
+    font-weight: ${({ theme }) => theme.FONT_WEIGHT.BOLD};
 `;

@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
     * {
@@ -8,8 +8,8 @@ export default createGlobalStyle`
     }
 
     body {
-        background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
-        color: ${({ theme }) => theme.COLORS.WHITE};
+        background-color: ${({ theme }) => theme.COLORS.GRAY_800};
+        color: ${({ theme }) => theme.COLORS.GRAY_100};
 
         -webkit-font-smoothing: antialiased;
     }
@@ -32,5 +32,4 @@ export default createGlobalStyle`
     button:hover, a:hover {
         filter: brightness(0.9);
     }
-
 `;

@@ -1,48 +1,65 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-
 export const Container = styled.div`
     width: 100%;
     height: 100vh;
-
     display: grid;
+
     grid-template-columns: 250px auto;
     grid-template-rows: 105px 128px auto 64px;
     grid-template-areas: 
     "brand header"
     "menu search"
     "menu content"
-    "newnote content";
+    "newNote content";
 
-    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+    background-color: ${({ theme }) => theme.COLORS.GRAY_800};
 `;
 
 export const Brand = styled.div`
     grid-area: brand;
-
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: auto;
+    background-color: ${({ theme }) => theme.COLORS.GRAY_900};
 
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-bottom-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
-
-    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
-
+    border-bottom-color: ${({ theme }) => theme.COLORS.GRAY_700};;
+    
     > h1 {
-        font-size: 24px;
-        color: ${({ theme }) => theme.COLORS.ORANGE};
+        font-size: ${({ theme }) => theme.FONT_SIZE.XXL};
+        font-weight: ${({ theme }) => theme.FONT_WEIGHT.BOLD};
+        color: ${({ theme }) => theme.COLORS.HIGHLIGHT_COLOR};
     }
+
 `;
 
 export const Menu = styled.ul`
     grid-area: menu;
-    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+    list-style: none;
+    background-color: ${({ theme }) => theme.COLORS.GRAY_900};
 
-    padding-top: 64px;
     text-align: center;
+    padding: 64px 0;
+
+    overflow-y: auto;
+
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: ${({ theme }) => theme.COLORS.HIGHLIGHT_COLOR};
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: ${({ theme }) => theme.COLORS.GRAY_900};
+        border-radius: 10px;
+    }
 
     > li {
         margin-bottom: 24px;
@@ -51,28 +68,41 @@ export const Menu = styled.ul`
 
 export const Search = styled.div`
     grid-area: search;
-    padding: 64px 64px 0;
+    padding: 0 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 export const Content = styled.div`
     grid-area: content;
-    padding: 0 64px;
+    margin: 0 64px 32px 64px;
+    padding-right: 8px;
     overflow-y: auto;
+
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: ${({ theme }) => theme.COLORS.GRAY_900};
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: ${({ theme }) => theme.COLORS.GRAY_800};
+        border-radius: 10px;
+    }
 `;
 
 export const NewNote = styled(Link)`
-    grid-area: newnote;
-
-    background-color: ${({ theme }) => theme.COLORS.ORANGE};
-    color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
-
-    border: none;
+    grid-area: newNote;
+    background-color: ${({ theme }) => theme.COLORS.HIGHLIGHT_COLOR};
+    color: ${({ theme }) => theme.COLORS.GRAY_900};
 
     display: flex;
-    align-items: center;
     justify-content: center;
-
-    svg {
-        margin-right: 8px;
-    }
+    align-items: center;
+    gap: 8px;
 `;
+

@@ -1,18 +1,22 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export const Container = styled.button`
+export const Container = styled(Link)`
     width: 100%;
-    background-color: ${({theme }) => theme.COLORS.ORANGE};
-    color: ${({theme }) => theme.COLORS.BACKGROUND_800};
-
     height: 56px;
-    border: 0;
+    background-color: ${({ theme }) => theme.COLORS.HIGHLIGHT_COLOR};
+    color: ${({ theme }) => theme.COLORS.GRAY_800};
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     padding: 0 16px;
-    margin-top: 16px;
+    margin-top: 32px;
     border-radius: 10px;
-    font-weight: 500;
+    font-weight: ${({ theme }) => theme.FONT_WEIGHT.MEDIUM};
 
     &:disabled {
         opacity: 0.5;
     }
-`;
+`;  

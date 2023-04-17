@@ -1,18 +1,18 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-    margin: 28px 0;
+    width: 100%;
+    margin-bottom: 24px;
 
     > h2 {
         border-bottom-width: 1px;
         border-bottom-style: solid;
-        border-bottom-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
-
-        padding-bottom: 16px;
+        border-bottom-color: ${({ theme }) => theme.COLORS.GRAY_700};
         margin-bottom: 28px;
+        padding-bottom: 16px;
 
-        color: ${({ theme }) => theme.COLORS.GRAY_100};
-        font-size: 20px;
-        font-weight: 400;
+        font-size: ${({ theme }) => theme.FONT_SIZE.XL};
+        font-weight: ${({ theme }) => theme.FONT_WEIGHT.REGULAR};
+        color: ${({ theme }) => theme.COLORS.GRAY_300};
     }
 `;

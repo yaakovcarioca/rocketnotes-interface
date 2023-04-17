@@ -3,42 +3,36 @@ import styled from "styled-components";
 export const Container = styled.div`
     display: flex;
     align-items: center;
-
-    background-color: ${({ theme, isNew }) => isNew ? "transparent" : theme.COLORS.BACKGROUND_900};
-    color: ${({ theme }) => theme.COLORS.GRAY_300};
-
-    border: ${({ theme, isNew }) => isNew ? `1px dashed ${theme.COLORS.GRAY_300}` : "none"};
-
+    padding: 0 16px;
     margin-bottom: 8px;
     border-radius: 10px;
-    padding-right: 16px;
 
-    > button {
-        border: none;
-        background: none;
-    }
+    background-color: 
+    ${({ theme, isNew }) => isNew ? "transparent" : theme.COLORS.GRAY_700};
 
-    .button-delete {
-        color: ${({ theme }) => theme.COLORS.RED}
-    }
+    border: ${({ theme, isNew }) => isNew ? `3px solid ${theme.COLORS.GRAY_500}` : "none"};
 
-    .button-add {
-        color: ${({ theme }) => theme.COLORS.ORANGE}
-    }
+    border-style: ${({ theme, isNew }) => isNew ? `dashed` : "none"};
 
     > input {
         height: 56px;
         width: 100%;
-
-        padding: 12px;
-
-        color: ${({ theme }) => theme.COLORS.WHITE};
+        padding: 10px;
         background: transparent;
-
+        color: ${({ theme }) => theme.COLORS.GRAY_100};
         border: none;
 
-        &::placeholder {
-            color: ${({ theme }) => theme.COLORS.GRAY_300};
+        ::placeholder {
+            color: ${({ theme }) => theme.COLORS.GRAY_500};
+        }
+    }
+
+    > button {
+        background: transparent;
+        border: none;
+        
+        > svg {
+            color: ${({ theme, isNew }) => isNew ? theme.COLORS.HIGHLIGHT_COLOR : "red"};
         }
     }
 `;
